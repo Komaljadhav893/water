@@ -17,19 +17,34 @@
   ],
   "historicalData": [
     {
-      "date": "2024-07-27",
-      "waterLevel": 65,
+      "date": "2024-08-1",
+      "waterLevel": 70,
       "gateStatus": "Open"
     },
     {
-      "date": "2024-07-26",
-      "waterLevel": 72,
+      "date": "2024-07-31",
+      "waterLevel": 65,
       "gateStatus": "Closed"
     },
     {
-      "date": "2024-07-25",
-      "waterLevel": 75,
+      "date": "2024-07-30",
+      "waterLevel": 55,
       "gateStatus": "Closed"
+    },
+    {
+      "date": "2024-07-29",
+      "waterLevel": 65,
+      "gateStatus": "Closed"
+    },
+    {
+      "date": "2024-07-28",
+      "waterLevel": 75,
+      "gateStatus": "open"
+    },
+    {
+      "date": "2024-07-27",
+      "waterLevel": 85,
+      "gateStatus": "open"
     }
   ]
 }

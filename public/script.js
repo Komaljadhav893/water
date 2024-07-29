@@ -1,74 +1,74 @@
-// // document.addEventListener('DOMContentLoaded', () => {
-// //   const waterLevelElement = document.getElementById('water-level');
-// //   const gateStatusElement = document.getElementById('gate-status');
-// //   const alertListElement = document.getElementById('alert-list');
-// //   const historyTableBody = document.querySelector('#history-table tbody');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const waterLevelElement = document.getElementById('water-level');
+//   const gateStatusElement = document.getElementById('gate-status');
+//   const alertListElement = document.getElementById('alert-list');
+//   const historyTableBody = document.querySelector('#history-table tbody');
 
-// //   // Simulate fetching data from a server
-// //   const fetchData = () => {
-// //     return {
-// //       waterLevel: Math.random() * 100, // Simulated water level
-// //       gateStatus: Math.random() > 0.5 ? 'Open' : 'Closed', // Simulated gate status
-// //       alerts: [], // Simulated alerts
-// //       historicalData: [
-// //         { date: '2024-07-27', waterLevel: 65, gateStatus: 'Open' },
-// //         { date: '2024-07-26', waterLevel: 72, gateStatus: 'Closed' },
-// //         { date: '2024-07-25', waterLevel: 75, gateStatus: 'Closed' },
+//   // Simulate fetching data from a server
+//   const fetchData = () => {
+//     return {
+//       waterLevel: Math.random() * 100, // Simulated water level
+//       gateStatus: Math.random() > 0.5 ? 'Open' : 'Closed', // Simulated gate status
+//       alerts: [], // Simulated alerts
+//       historicalData: [
+//         { date: '2024-07-27', waterLevel: 65, gateStatus: 'Open' },
+//         { date: '2024-07-26', waterLevel: 72, gateStatus: 'Closed' },
+//         { date: '2024-07-25', waterLevel: 75, gateStatus: 'Closed' },
 
-// //       ] // Simulated historical data
-// //     };
-// //   };
+//       ] // Simulated historical data
+//     };
+//   };
 
-// //   // Update the interface with fetched data
-// //   const updateInterface = () => {
-// //     const data = fetchData();
+//   // Update the interface with fetched data
+//   const updateInterface = () => {
+//     const data = fetchData();
 
-// //     // Check for critical water levels
-// //     if (data.waterLevel > 80) {
-// //       data.alerts.push('Critical water level! Immediate action required.');
-// //     }
+//     // Check for critical water levels
+//     if (data.waterLevel > 80) {
+//       data.alerts.push('Critical water level! Immediate action required.');
+//     }
 
-// //     // Check for gate malfunctions (simulate with random chance)
-// //     if (Math.random() > 0.95) {
-// //       data.alerts.push('Gate malfunction detected!');
-// //     }
+//     // Check for gate malfunctions (simulate with random chance)
+//     if (Math.random() > 0.95) {
+//       data.alerts.push('Gate malfunction detected!');
+//     }
 
-// //     // Update water level and gate status
-// //     waterLevelElement.textContent = data.waterLevel.toFixed(2) + ' cm';
-// //     gateStatusElement.textContent = data.gateStatus;
+//     // Update water level and gate status
+//     waterLevelElement.textContent = data.waterLevel.toFixed(2) + ' cm';
+//     gateStatusElement.textContent = data.gateStatus;
 
-// //     // Update alerts
-// //     alertListElement.innerHTML = '';
-// //     data.alerts.forEach(alert => {
-// //       const li = document.createElement('li');
-// //       li.textContent = alert;
-// //       alertListElement.appendChild(li);
-// //     });
+//     // Update alerts
+//     alertListElement.innerHTML = '';
+//     data.alerts.forEach(alert => {
+//       const li = document.createElement('li');
+//       li.textContent = alert;
+//       alertListElement.appendChild(li);
+//     });
 
-// //     // Update historical data
-// //     historyTableBody.innerHTML = '';
-// //     data.historicalData.forEach(record => {
-// //       const tr = document.createElement('tr');
-// //       const dateTd = document.createElement('td');
-// //       dateTd.textContent = record.date;
-// //       const waterLevelTd = document.createElement('td');
-// //       waterLevelTd.textContent = record.waterLevel + ' cm';
-// //       const gateStatusTd = document.createElement('td');
-// //       gateStatusTd.textContent = record.gateStatus;
+//     // Update historical data
+//     historyTableBody.innerHTML = '';
+//     data.historicalData.forEach(record => {
+//       const tr = document.createElement('tr');
+//       const dateTd = document.createElement('td');
+//       dateTd.textContent = record.date;
+//       const waterLevelTd = document.createElement('td');
+//       waterLevelTd.textContent = record.waterLevel + ' cm';
+//       const gateStatusTd = document.createElement('td');
+//       gateStatusTd.textContent = record.gateStatus;
 
-// //       tr.appendChild(dateTd);
-// //       tr.appendChild(waterLevelTd);
-// //       tr.appendChild(gateStatusTd);
-// //       historyTableBody.appendChild(tr);
-// //     });
-// //   };
+//       tr.appendChild(dateTd);
+//       tr.appendChild(waterLevelTd);
+//       tr.appendChild(gateStatusTd);
+//       historyTableBody.appendChild(tr);
+//     });
+//   };
 
-// //   // Initial update
-// //   updateInterface();
+//   // Initial update
+//   updateInterface();
 
-// //   // Update every 5 seconds
-// //   setInterval(updateInterface, 36000);
-// // });
+//   // Update every 5 seconds
+//   setInterval(updateInterface, 36000);
+// });
 
 
 // // // extra
@@ -260,6 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBar = document.getElementById('search-bar');
   const damInfoContainer = document.getElementById('dam-info-container');
   const pieChart = document.getElementById('pie-chart').getContext('2d');
+  // PASING
+  
 
   async function fetchHistoricalData() {
     try {
@@ -343,3 +345,6 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchHistoricalData();
   setInterval(updateInterface, 60000); // Refresh data every minute
 });
+
+
+//
