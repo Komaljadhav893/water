@@ -47,7 +47,6 @@
 //     res.json(JSON.parse(data));
 //   });
 // });
-
 // // Endpoint to trigger email alerts
 // app.post('/send-alert', (req, res) => {
 //   const subject = req.body.subject;
@@ -93,16 +92,6 @@
 // app.listen(PORT, () => {
 //   console.log(`Server is running on http://localhost:${PORT}`);
 // });
-
-
-
-
-
-
-
-
-
-
 const fs = require('fs');
 const express = require('express');
 const nodemailer = require('nodemailer');

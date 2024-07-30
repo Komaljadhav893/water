@@ -345,6 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchHistoricalData();
   setInterval(updateInterface, 60000); // Refresh data every minute
 });
+// pie chart
 
 
-//
+

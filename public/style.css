@@ -1,144 +1,29 @@
-/* body {
-  font-family: Arial, sans-serif;
-}
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-nav img {
-  border-radius: 50%;
-  height: 45px;
-  width: 50px;
-  margin-right: 20px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #ccc;
-}
-#current-status {
-  margin-bottom: 20px;
-}
-
-#alerts, #historical-data {
-  margin-top: 20px;
-}
-
-#history-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#history-table th, #history-table td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
-}
-
-#history-table th {
-  background-color: #f4f4f4;
-}
-
-/* search bar */
-/* #search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-#search-bar {
-  width: 50%;
-  height: 40px;
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#search-button {
-  width: 100px;
-  height: 40px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#search-button:hover {
-  background-color: #444;
-}
-
-#dam-info-container {
-  width: 50%;
-  margin-left: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#dam-name {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-#dam-picture-container {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
-}
-
-#dam-picture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-#number-of-gates, #current-water-level, #max-water-level-capacity {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}  */
-body{
-	margin:0;
-	padding:0;
-	background:#fafafa;
-  background-image: url(dam2jpg.jpg);
+body {
+	margin: 0;
+	padding: 0;
+	background: #fafafa; /* Fallback color */
+	background-image: 
+		linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
+		url("hack.jpeg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	animation: backgroundAnimation 15s linear infinite;
 }
+
+@keyframes backgroundAnimation {
+	0% {
+		background-position: center top;
+	}
+	50% {
+		background-position: center bottom;
+	}
+	100% {
+		background-position: center top;
+	}
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -152,14 +37,51 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDownFadeIn 0.5s ease-in-out forwards;
 }
 
+@keyframes slideDownFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo image style */
 nav img {
   border-radius: 50%;
   height: 45px;
   width: 50px;
   margin-right: 20px;
+  opacity: 0;
+  transform: scale(0.5) rotate(-180deg);
+  animation: scaleRotate1 1s ease-in-out forwards 0.5s, 
+             scaleRotate2 1.2s ease-in-out forwards 1s, 
+             scaleRotate3 1.5s ease-in-out forwards 1.5s;
+}
+
+/* Animation for scaling up and rotating */
+@keyframes scaleRotate1 {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes scaleRotate2 {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes scaleRotate3 {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
 }
 
 nav ul {
@@ -227,14 +149,22 @@ nav a:hover {
 }
 
 #search-button {
-  width: 50px;
+  width: 80px;
   height: 40px;
-  background-color: #3e336dea;
+  background-color: #052d5c;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+#search-button:hover {
+  background-color: #574c91;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 #search-button:hover {
   background-color: #444;
@@ -266,43 +196,106 @@ nav a:hover {
 
 
 /* extra */
-.main .info{
+.main .info {
 	position: absolute;
-	height:auto;
-	width:100%;
-	top:50%;
+	height: auto;
+	width: 100%;
+	top: 50%;
 	transform: translateY(-50%);
 	text-align: center;
-}
-.info .head{
-	position: relative;
-	height:auto;
-	width:100%;
-	text-align: center;
-	font-family:'Lato',sans-serif ;
-	font-size:19px;
-	font-weight:600;
-	color:#fff;
-	text-shadow:0px 5px 5px rgba(0, 0, 0, 0.5);
-}
- .info .head h1{
-	letter-spacing: 2px;
-}
- .info .head h1 span{
-	color:#e03e0dd2;
+	animation: fadeIn 2s ease-in-out forwards;
 }
 
-.info .head p{
-	height:auto;
-	width:100%;
-	text-align: center;
-	font-family:'cinzel',sans-serif ;
-	font-size:14px;
-	font-weight:300;
-	color:#f0efe5c4;
-	text-shadow:0px 15px 15px rgba(0, 0, 0, 0.5);
-	margin:-2% 0 2% 0;
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
+
+.info .head {
+	position: relative;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 19px;
+	font-weight: 600;
+	color: #fff;
+	text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+	animation: slideIn 1.5s ease-in-out forwards 0.5s;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.info .head h1 {
+	letter-spacing: 2px;
+	animation: bounceIn 1.2s ease-in-out forwards 1s;
+}
+
+@keyframes bounceIn {
+	0% {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.info .head h1 span {
+	color: #e03e0dd2;
+	animation: colorChange 2s infinite alternate;
+}
+
+@keyframes colorChange {
+	from {
+		color: #e03e0dd2;
+	}
+	to {
+		color: #ff5733;
+	}
+}
+
+.info .head p {
+	height: auto;
+	width: 100%;
+	text-align: center;
+	font-family: 'Cinzel', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #141411c4;
+	text-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+	margin: -2% 0 2% 0;
+	animation: fadeInUp 1.5s ease-in-out forwards 1.5s;
+}
+
+@keyframes fadeInUp {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 /* xyxyx */
 .portfolio-sec{
   height: 110vh;
@@ -398,3 +391,4 @@ footer{
 #click, .menu-btn i{
   display: none;
 }
+
