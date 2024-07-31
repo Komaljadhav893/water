@@ -170,6 +170,21 @@ nav a:hover {
   background-color: #444;
 }
 
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
 #dam-info-container {
   width: 40%;
   margin-left: 10px;
@@ -177,12 +192,28 @@ nav a:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: rotateIn 2s ease-in-out forwards;
+}
+
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 #dam-name {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  opacity: 0; /* Start with the text invisible */
+  animation: fadeInScale 1s ease-out forwards; /* Apply the fadeInScale animation */
 }
 
 #dam-location, #number-of-gates, #max-water-level, #current-water-level {
@@ -299,7 +330,7 @@ nav a:hover {
 /* xyxyx */
 .portfolio-sec{
   height: 110vh;
-  background:linear-gradient(rgba(46, 48, 221, 0.6),rgb(238, 241, 245))
+  /* background:linear-gradient(rgba(46, 48, 221, 0.6),rgb(238, 241, 245)) */
 }
 
 .portfolio > h3{
@@ -346,7 +377,7 @@ nav a:hover {
 /* contact */
 
 .contact-us-sec{
-  background-color: darkgray;
+  /* background-color: darkgray; */
   height: 50vh;
   padding: 35px 0;
 }
