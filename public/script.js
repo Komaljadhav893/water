@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
       historyTableBody.innerHTML = '';
       data.forEach(entry => {
         const row = document.createElement('tr');
-        row.innerHTML = `<td>${entry.date}</td><td>${entry.waterLevel} cm</td><td>${entry.gateStatus}</td>`;
+        row.innerHTML = `<td>${entry.date}</td><td>${entry.waterLevel} cm</td><td>${entry.gateStatus1}</td><td>${entry.gateStatus2}</td><td>${entry.gateStatus3}</td>`;
         historyTableBody.appendChild(row);
       });
     } catch (error) {

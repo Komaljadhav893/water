@@ -19,32 +19,44 @@
     {
       "date": "2024-08-1",
       "waterLevel": 70,
-      "gateStatus": "Open"
+      "gateStatus1": "Open",
+      "gateStatus2": "Open",
+      "gateStatus3": "Open"
     },
     {
       "date": "2024-07-31",
       "waterLevel": 65,
-      "gateStatus": "Closed"
+      "gateStatus1": "Open",
+      "gateStatus2": "Open",
+      "gateStatus3": "Open"
     },
     {
       "date": "2024-07-30",
       "waterLevel": 55,
-      "gateStatus": "Closed"
+      "gateStatus1": "Open",
+      "gateStatus2": "Open",
+      "gateStatus3": "Open"
     },
     {
       "date": "2024-07-29",
       "waterLevel": 65,
-      "gateStatus": "Closed"
+      "gateStatus1": "Open",
+      "gateStatus2": "Open",
+      "gateStatus3": "Open"
     },
     {
       "date": "2024-07-28",
       "waterLevel": 75,
-      "gateStatus": "open"
+      "gateStatus1": "Open",
+      "gateStatus2": "Open",
+      "gateStatus3": "Open"
     },
     {
       "date": "2024-07-27",
       "waterLevel": 85,
-      "gateStatus": "open"
+      "gateStatus1": "Open",
+      "gateStatus2": "Open",
+      "gateStatus3": "Open"
     }
   ]
 }

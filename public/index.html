@@ -13,9 +13,9 @@
     <img src="techjpg.jpg" alt="Logo">
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Water Level</a></li>
-      <li><a href="#">Gate Status</a></li>
-      <li><a href="#">History</a></li>
+      
+      <li><a href="#">Gate Status And History</a></li>
+      
       <li><a href="#">Info</a></li>
       <li><a href="#">Activities</a></li>
       <li><a href="#">Contact us</a></li>
@@ -30,8 +30,10 @@
       <p>Welcome to the Dam Water Flow Rate Analyzer, your premier tool for monitoring and analyzing water flow rates in dams. Ensuring the safety and efficiency of water resource management.</p>
     </div>
   <div id="search-container">
-    <input type="search" id="search-bar" placeholder="Search dam name...">
-    <button id="search-button">Search</button>
+    
+    <input type="search" id="search-bar" placeholder="Search dam name...   " >
+    <button id="search-button">
+     <img src="" alt=""> Search</button>
     <div id="dam-info-container" style="display: none;">
       <h2 id="dam-name"></h2>
       <p id="dam-location"></p>
@@ -42,21 +44,23 @@
     </div>
   </div>
   <div id="current-status">
-    <p>Current Water Level: <span id="water-level">--</span></p>
-    <p>Gate Status: <span id="gate-status">--</span></p>
+    <p style="color: blanchedalmond;">Current Water Level: <span id="water-level">--</span></p>
+    <p style="color: blanchedalmond;">Gate Status: <span id="gate-status">--</span></p>
   </div>
   <div id="alerts">
-    <h2>Alerts</h2>
+    <h2 style=" color: blanchedalmond;">Alerts</h2>
     <ul id="alert-list"></ul>
   </div>
   <div id="historical-data">
-    <h2>Historical Data</h2>
+    <h2 style="color: blanchedalmond;">Historical Data</h2>
     <table id="history-table">
       <thead>
         <tr>
           <th>Date</th>
           <th>Water Level</th>
-          <th>Gate Status</th>
+          <th>Gate Status 1</th>
+          <th>Gate Status 2</th>
+          <th>Gate Status 3</th>
         </tr>
       </thead>
       <tbody id="history-table-body">

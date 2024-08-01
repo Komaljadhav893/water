@@ -1,16 +1,31 @@
 
 body {
-	margin: 0;
-	padding: 0;
-	background: #fafafa; /* Fallback color */
-	background-image: 
-		linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
-		url("hack.jpeg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	animation: backgroundAnimation 15s linear infinite;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure the body takes the full viewport height */
+  background-image: url("https://th.bing.com/th/id/OIP.X1VCeB3uNoJuXMLPd7FXaAHaEI?w=281&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+
+  z-index: 0; /* Ensure body content is above the pseudo-element */
 }
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+  z-index: -1; /* Place the overlay below the body content */
+}
+
+  
+
 
 @keyframes backgroundAnimation {
 	0% {
@@ -29,7 +44,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #26148d;
+  background: linear-gradient(135deg, #26148d, #8b4513);
   color: #fff;
   padding: 0.5em;
   text-align: center;
@@ -123,11 +138,16 @@ nav a:hover {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
+  color: aliceblue;
 }
 
 #history-table th {
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(220, 220, 220, 0.8));
+  color: black;
+  padding: 10px; /* Add padding for better appearance */
+  border-bottom: 2px solid #ccc; /* Optional: Add a bottom border for separation */
 }
+
 
 #search-container {
   display: flex;
@@ -136,25 +156,29 @@ nav a:hover {
   padding: 20px;
 }
 
-#search-bar {
+ #search-bar {
   width: 45%;
   height: 40px;
   padding: 10px;
+  padding-right: 40px; /* Adjust to make space for the icon */
   font-size: 18px;
-  border: 2px solid #4442a8d5;
-  border-radius: 5px;
-	background:#c8c2d6;
-	/* border:5px solid rgb(75, 91, 235); */
-	border-radius: 30px;
-}
+  border: 2px solid#c8c2d6 ;
+  
+  border-radius: 30px;
+  background: white url("https://th.bing.com/th/id/OIP.LwNGX9Hx0mIyG98BgbbpMwHaHa?w=216&h=215&c=7&r=0&o=5&dpr=1.1&pid=1.7") no-repeat right center ;
+  background-size: 30px 30px; /* Adjust the size of the icon */
+  outline: none; /* Remove outline on focus */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+} 
 
-#search-button {
+
+#search-button  {
   width: 80px;
   height: 40px;
   background-color: #052d5c;
   color: #fff;
   border: none;
-  border-radius: 20px;
+  border-radius: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -214,11 +238,13 @@ nav a:hover {
   margin-bottom: 10px;
   opacity: 0; /* Start with the text invisible */
   animation: fadeInScale 1s ease-out forwards; /* Apply the fadeInScale animation */
+
 }
 
 #dam-location, #number-of-gates, #max-water-level, #current-water-level {
   font-size: 18px;
   margin-bottom: 5px;
+ 
 }
 
 #pie-chart {
@@ -310,7 +336,7 @@ nav a:hover {
 	font-family: 'Cinzel', sans-serif;
 	font-size: 14px;
 	font-weight: 300;
-	color: #141411c4;
+	color: whitesmoke;
 	text-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
 	margin: -2% 0 2% 0;
 	animation: fadeInUp 1.5s ease-in-out forwards 1.5s;
