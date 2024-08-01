@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Level and Gate Status</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <img src="techjpg.jpg" alt="Logo">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#gate-status-history">Gate Status And History</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#contact-us">Contact us</a></li>
+    </ul>
+  </nav>
+  <h1>Water Level and Gate Status</h1>
+
+  <!-- EXTRA -->
+  <div class="info">
+    <div class="head">
+      <h1>WELCOME TO <span>DAM WATER FLOW RATE ANALYZER</span></h1>
+      <p>Welcome to the Dam Water Flow Rate Analyzer, your premier tool for monitoring and analyzing water flow rates in dams. Ensuring the safety and efficiency of water resource management.</p>
+    </div>
+  <div id="search-container">
+    
+    <input type="search" id="search-bar" placeholder="Search dam name...   " >
+    <button id="search-button">
+     <img src="" alt=""> Search</button>
+    <div id="dam-info-container" style="display: none;">
+      <h2 id="dam-name"></h2>
+      <p id="dam-location"></p>
+      <p id="number-of-gates"></p>
+      <p id="max-water-level"></p>
+      <p id="current-water-level"></p>
+      <canvas id="pie-chart"></canvas>
+    </div>
+  </div>
+  <div id="gate-status-history">
+  <div id="current-status">
+    <p style="color: blanchedalmond;">Current Water Level: <span id="water-level">--</span></p>
+    <p style="color: blanchedalmond;">Gate Status: <span id="gate-status">--</span></p>
+  </div>
+  </div>
+  <div id="alerts">
+    <h2 style=" color: blanchedalmond;">Alerts</h2>
+    <ul id="alert-list"></ul>
+  </div>
+  <div id="historical-data">
+    <h2 style="color: blanchedalmond;">Historical Data</h2>
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Water Level</th>
+          <th>Gate Status 1</th>
+          <th>Gate Status 2</th>
+          <th>Gate Status 3</th>
+        </tr>
+      </thead>
+      <tbody id="history-table-body">
+        <!-- Historical data rows will go here -->
+      </tbody>
+    </table>
+<!-- xyzxyzxyz -->
+  <!-- portfolio section start  -->
+  <section class="portfolio-sec">
+    <div class="portfolio layout">
+        <h3 class="uppercase text-center pd-30">Gets Info...</h3>
+        <div class="portolio-parent flex justify-center align-center text-center">
+            <div class="portfolio-child">
+                <!-- <img src="asset/digial marketing.jpg" alt=""> -->
+                <h3></h3>
+                <p>*Attention Farmers:This is a crucial update regarding the current water levels in the dam. The dam is approaching its maximum capacity, and we want to ensure that you are prepared and safe.<br>
+        
+                  Please take the following precautionary measures:
+                  
+                  1. Monitor Local Alerts: Stay updated with official weather warnings and dam level reports. Local authorities will provide timely information and instructions.</br>
+                  
+                  2. Check Irrigation Systems: Ensure that your irrigation systems are functioning properly and can handle potential fluctuations in water supply.</br>
+                  
+                  3. Secure Livestock and Equipment: If necessary, move livestock and valuable equipment to higher ground to avoid potential flooding.</br>
+                  
+                  4. Review Drainage Plans:Check and clear any drainage systems on your property to facilitate efficient water flow and reduce the risk of flooding.</br>
+                  
+                  5.Prepare Emergency Supplies: Have an emergency kit ready with essentials such as food, water, and first aid supplies in case of an evacuation.</br>
+                  
+                  6.Communicate with Neighbors: Share information with neighboring farms and work together to address any potential risks.</br>
+                  
+                  7.Follow Safety Guidelines: Adhere to any safety guidelines or evacuation orders issued by local authorities.</br>
+                  </p>
+               
+            </div>
+
+            <div class="portfolio-child">
+                <!-- <img src="asset/food-burger.jpg" alt=""> -->
+                 <h3 id="activities">Activities</h3>
+                <p>Boating:
+                Kayaking and Canoeing: Enjoying the water in small, paddle-powered boats.
+                Motorboating: Using motorized boats for leisure or fishing.
+                Fishing:
+                Angling: Both shore and boat fishing for various species found in the reservoir.
+                Fly Fishing: Particularly popular in rivers below the dam.
+                Swimming:
+                Designated Swimming Areas: Safe zones for swimming, often with lifeguards.
+                Hiking and Nature Walks
+                Scenic Views: Capturing the beauty of the dam, reservoir, and surrounding nature.</p>
+               
+            </div>
+
+            <div class="portfolio-child">
+                <!-- <img src="asset/social media.jpg" alt=""> -->
+                <h3 id="info">All Information About Dam</h3>
+                <p>Type of Dam:
+                  Gravity Dam: The Tungabhadra Dam is a gravity dam, meaning it relies on its weight to resist the force of the water.
+                  Height:
+                  49.38 meters (162 feet): The height of the dam from the foundation.</br>
+                  
+                  Length:
+                  2,441 meters (8,010 feet): The total length of the dam.</br>
+                  Reservoir Capacity:
+                  Full Reservoir Level (FRL): 497.74 meters (1,633 feet).
+                  Gross Storage Capacity: Approximately 3,760 million cubic meters (MCM).</br>
+                  Spillway Capacity:
+                  11,500 cubic meters per second (cumecs): The maximum discharge capacity of the spillway.
+                  Functional Characteristics</br>
+                  Purpose:Irrigation: Provides water for irrigation to the agricultural lands in the Tungabhadra Command Area.
+                  Hydropower Generation: Generates hydroelectric power.
+                  Flood Control: Helps in controlling floods during the monsoon season.
+                  Water Supply: Supplies water for domestic and industrial use.</br>
+                  Power Generation:
+                  Installed Capacity: The dam has several hydroelectric power stations with a combined capacity of around 72 MW.
+                  Geographic and Environmental Characteristics</br>
+                  Location:
+                  River: Built across the Tungabhadra River, a tributary of the Krishna River.
+                  District: Situated in the Ballari District of Karnataka and Kurnool District of Andhra Pradesh.
+                  Coordinates: Approximately 15° 15' N latitude and 76° 20' E longitude.
+                  Catchment Area:
+                  28,177 square kilometers (10,882 square miles): The area from which the dam collects runoff water.</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- portfolio section end  -->
+
+
+    <!-- contact-us section start  -->
+    <section class="contact-us-sec">
+      <div class="contact-us layout">
+          <h3 class="text-center uppercase pd-30" id="contact-us">Contact us</h3>
+          <div class="contact-details flex space-between align-center">
+              <div class="left-sec">
+                  <h5>Main Branch</h5>
+                  <p>Karnataka<br> Main Road UNESCO World Heritage site, Hampi. <br>Hospet (Hosapete)</p>
+              </div>
+              <div class="center-sec">
+                  <h5>Contact No.</h5>
+                  <p>Mobile No. +1234567890</p>
+                  <h5>Email Id</h5>
+                  <p>xyz@techinnovators.com</p>
+              </div>
+              <div class="right-sec text-center">
+                  <form action="">
+                      Email : <input type="email" id="xyz@email.com" placeholder="xyz@email.com" >
+                      <button id="search-button" style="height: 25px";>submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- contact-us section end  -->
+<br>
+  <!-- footer section  -->
+  <footer>
+      <div class="footer-sec layout text-center">
+          <p>Copyright &copy; techinnovators | All Right Reserved</p>
+      </div>
+  </footer>
+     
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
