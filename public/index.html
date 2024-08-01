@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +12,10 @@
     <img src="techjpg.jpg" alt="Logo">
     <ul>
       <li><a href="#">Home</a></li>
-      
-      <li><a href="#">Gate Status And History</a></li>
-      
-      <li><a href="#">Info</a></li>
-      <li><a href="#">Activities</a></li>
-      <li><a href="#">Contact us</a></li>
+      <li><a href="#gate-status-history">Gate Status And History</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#contact-us">Contact us</a></li>
     </ul>
   </nav>
   <h1>Water Level and Gate Status</h1>
@@ -43,9 +40,11 @@
       <canvas id="pie-chart"></canvas>
     </div>
   </div>
+  <div id="gate-status-history">
   <div id="current-status">
     <p style="color: blanchedalmond;">Current Water Level: <span id="water-level">--</span></p>
     <p style="color: blanchedalmond;">Gate Status: <span id="gate-status">--</span></p>
+  </div>
   </div>
   <div id="alerts">
     <h2 style=" color: blanchedalmond;">Alerts</h2>
@@ -99,7 +98,7 @@
 
             <div class="portfolio-child">
                 <img src="asset/food-burger.jpg" alt="">
-                 <h3>Activities</h3>
+                 <h3 id="activities">Activities</h3>
                 <p>Boating:
                 Kayaking and Canoeing: Enjoying the water in small, paddle-powered boats.
                 Motorboating: Using motorized boats for leisure or fishing.
@@ -115,7 +114,7 @@
 
             <div class="portfolio-child">
                 <!-- <img src="asset/social media.jpg" alt=""> -->
-                <h3>All Information About Dam</h3>
+                <h3 id="info">All Information About Dam</h3>
                 <p>Type of Dam:
                   Gravity Dam: The Tungabhadra Dam is a gravity dam, meaning it relies on its weight to resist the force of the water.
                   Height:
@@ -153,7 +152,7 @@
     <!-- contact-us section start  -->
     <section class="contact-us-sec">
       <div class="contact-us layout">
-          <h3 class="text-center uppercase pd-30">Contact us</h3>
+          <h3 class="text-center uppercase pd-30" id="contact-us">Contact us</h3>
           <div class="contact-details flex space-between align-center">
               <div class="left-sec">
                   <h5>Main Branch</h5>
@@ -167,8 +166,8 @@
               </div>
               <div class="right-sec text-center">
                   <form action="">
-                      Email : <input type="email" id="xyz@email.com"> <br>
-                      <button class="btn btn2">submit</button>
+                      Email : <input type="email" id="xyz@email.com" placeholder="xyz@email.com" >
+                      <button id="search-button" style="height: 25px";>submit</button>
                   </form>
               </div>
           </div>
@@ -184,9 +183,6 @@
   </footer>
      
   </div>
-  <script src="script.js">
-    
-  </script>
-  
+  <script src="script.js"></script>
 </body>
 </html>
