@@ -9,7 +9,9 @@
 </head>
 <body>
   <nav>
+    <!-- logo added -->
     <img src="techjpg.jpg" alt="Logo">
+    <!-- nav bar items -->
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#gate-status-history">Gate Status And History</a></li>
@@ -18,29 +20,37 @@
       <li><a href="#contact-us">Contact us</a></li>
     </ul>
   </nav>
-  <h1>Water Level and Gate Status</h1>
+  <!-- extra unessasry line -->
+  <h1>Water Level and Gate Status</h1>   
 
-  <!-- EXTRA -->
+  <!-- Title -->
   <div class="info">
     <div class="head">
-      <h1>WELCOME TO <span>DAM WATER FLOW RATE ANALYZER</span></h1>
+      <h1> <span>DAM WATER FLOW RATE ANALYZER</span></h1>
+      <!-- related words about the title -->
       <p>Welcome to the Dam Water Flow Rate Analyzer, your premier tool for monitoring and analyzing water flow rates in dams. Ensuring the safety and efficiency of water resource management.</p>
     </div>
+
+
+    <!-- Search bar -->
   <div id="search-container">
-    
     <input type="search" id="search-bar" placeholder="Search dam name...   " >
     <button id="search-button">
-     <img src="" alt=""> Search</button>
+      <!-- Below information will display we click on the search button -->
     <div id="dam-info-container" style="display: none;">
       <h2 id="dam-name"></h2>
       <p id="dam-location"></p>
       <p id="number-of-gates"></p>
       <p id="max-water-level"></p>
       <p id="current-water-level"></p>
+      <!-- canvas for graphics -->
       <canvas id="pie-chart"></canvas>
     </div>
   </div>
+
+
   <div id="gate-status-history">
+    <!-- current water level js (314 line)-->
   <div id="current-status">
     <p style="color: blanchedalmond;">Current Water Level: <span id="water-level">--</span></p>
     <p style="color: blanchedalmond;">Gate Status: <span id="gate-status">--</span></p>
@@ -50,6 +60,8 @@
     <h2 style=" color: blanchedalmond;">Alerts</h2>
     <ul id="alert-list"></ul>
   </div>
+
+  <!-- For saving historical data -->
   <div id="historical-data">
     <h2 style="color: blanchedalmond;">Historical Data</h2>
     <table id="history-table">
@@ -66,15 +78,15 @@
         <!-- Historical data rows will go here -->
       </tbody>
     </table>
-<!-- xyzxyzxyz -->
-  <!-- portfolio section start  -->
+
+  <!-- portfolio section start(basically information for farmers)  -->
   <section class="portfolio-sec">
     <div class="portfolio layout">
         <h3 class="uppercase text-center pd-30">Gets Info...</h3>
         <div class="portolio-parent flex justify-center align-center text-center">
             <div class="portfolio-child">
                 <img src="asset/digial marketing.jpg" alt="">
-                <h3></h3>
+                <h3>For Farmers</h3>
                 <p>*Attention Farmers:This is a crucial update regarding the current water levels in the dam. The dam is approaching its maximum capacity, and we want to ensure that you are prepared and safe.<br>
         
                   Please take the following precautionary measures:
@@ -93,11 +105,9 @@
                   
                   7.Follow Safety Guidelines: Adhere to any safety guidelines or evacuation orders issued by local authorities.</br>
                   </p>
-               
             </div>
-
+                              <!-- Activits section -->
             <div class="portfolio-child">
-                <img src="asset/food-burger.jpg" alt="">
                  <h3 id="activities">Activities</h3>
                 <p>Boating:
                 Kayaking and Canoeing: Enjoying the water in small, paddle-powered boats.
@@ -109,12 +119,11 @@
                 Designated Swimming Areas: Safe zones for swimming, often with lifeguards.
                 Hiking and Nature Walks
                 Scenic Views: Capturing the beauty of the dam, reservoir, and surrounding nature.</p>
-               
             </div>
 
+  <!-- All Information About The -->
             <div class="portfolio-child">
-                <!-- <img src="asset/social media.jpg" alt=""> -->
-                <h3 id="info">All Information About Dam</h3>
+             <h3 id="info">All Information About Dam</h3>
                 <p>Type of Dam:
                   Gravity Dam: The Tungabhadra Dam is a gravity dam, meaning it relies on its weight to resist the force of the water.
                   Height:
@@ -148,7 +157,6 @@
 </section>
 <!-- portfolio section end  -->
 
-
     <!-- contact-us section start  -->
     <section class="contact-us-sec">
       <div class="contact-us layout">
@@ -181,6 +189,7 @@
           <p>Copyright &copy; techinnovators | All Right Reserved</p>
       </div>
   </footer>
+  <!-- Footer end -->
      
   </div>
   <script src="script.js"></script>
