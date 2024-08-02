@@ -5,14 +5,16 @@
       "location": "Location A",
       "numberOfGates": 10,
       "maxWaterLevel": 100,
-      "currentWaterLevel": 75
+      "currentWaterLevel": 75,
+      "alert": "water level is above the threshold"
     },
     {
       "name": "Dam B",
       "location": "Location B",
       "numberOfGates": 15,
       "maxWaterLevel": 200,
-      "currentWaterLevel": 150
+      "currentWaterLevel": 150,
+      "alert": "water level is above the threshold"
     }
   ],
   "historicalData": [

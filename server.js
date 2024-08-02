@@ -63,11 +63,12 @@ const sendEmailReport = () => {
       <p>Number of Gates: ${dam.numberOfGates}</p>
       <p>Max Water Level: ${dam.maxWaterLevel} cm</p>
       <p>Current Water Level: ${dam.currentWaterLevel} cm</p>
+      <p>Alert:${dam.alert}</P>
     `).join('');
 
     const mailOptions = {
       from: 'komaljadav2593@gmail.com',
-      to: 'prashant.sagar.shakya@gmail.com',
+      to: 'pavansai200503@gmail.com',
       subject: 'Daily Dam Report',
       html: `<h2>Daily Dam Report</h2>${damReports}`
     };
@@ -83,11 +84,11 @@ const sendEmailReport = () => {
 };
 
 // Send email report immediately
-sendEmailReport();
+// sendEmailReport();
 
-// Send email report every 5 minutes
-setInterval(sendEmailReport, 60 * 60 * 1000); // Every 60 minutes
+// // Send email report every 5 minutes
+// setInterval(sendEmailReport, 1 * 60 * 1000); // Every 01 minutes
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
