@@ -266,7 +266,7 @@ const sendEmailReport = () => {
 sendEmailReport();
 
 // Send email report every 5 minutes
-setInterval(sendEmailReport, 5 * 60 * 1000); // Every 5 minutes
+setInterval(sendEmailReport, 60 * 60 * 1000); // Every 60 minutes
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
