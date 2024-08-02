@@ -247,7 +247,7 @@ const sendEmailReport = () => {
 
     const mailOptions = {
       from: 'komaljadav2593@gmail.com',
-      to: 'pavansai200503@gmail.com',
+      to: 'prashant.sagar.shakya@gmail.com',
       subject: 'Daily Dam Report',
       html: `<h2>Daily Dam Report</h2>${damReports}`
     };
@@ -262,9 +262,11 @@ const sendEmailReport = () => {
   });
 };
 
-// Send email report immediately and then every hour
+// Send email report immediately
 sendEmailReport();
-setInterval(sendEmailReport,  60 * 1000); // Every hour
+
+// Send email report every 5 minutes
+setInterval(sendEmailReport, 5 * 60 * 1000); // Every 5 minutes
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
