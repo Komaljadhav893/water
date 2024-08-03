@@ -7,50 +7,43 @@
       "maxWaterLevel": 100,
       "currentWaterLevel": 75,
       "alert": "water level is above the threshold"
-    },
-    {
-      "name": "Dam B",
-      "location": "Location B",
-      "numberOfGates": 15,
-      "maxWaterLevel": 200,
-      "currentWaterLevel": 150,
-      "alert": "water level is above the threshold"
     }
+    
   ],
   "historicalData": [
     {
       "date": "2024-08-1",
-      "waterLevel": 70,
+      "waterLevel": 75,
       "gateStatus1": "Open",
-      "gateStatus2": "Open",
-      "gateStatus3": "Open"
+      "gateStatus2": "closed",
+      "gateStatus3": "Closed"
     },
     {
       "date": "2024-07-31",
       "waterLevel": 65,
-      "gateStatus1": "Open",
-      "gateStatus2": "Open",
-      "gateStatus3": "Open"
+      "gateStatus1": "Closed",
+      "gateStatus2": "Closed",
+      "gateStatus3": "Closed"
     },
     {
       "date": "2024-07-30",
       "waterLevel": 55,
-      "gateStatus1": "Open",
-      "gateStatus2": "Open",
-      "gateStatus3": "Open"
+      "gateStatus1": "Closed",
+      "gateStatus2": "Closed",
+      "gateStatus3": "Closed"
     },
     {
       "date": "2024-07-29",
       "waterLevel": 65,
       "gateStatus1": "Open",
-      "gateStatus2": "Open",
-      "gateStatus3": "Open"
+      "gateStatus2": "Closed",
+      "gateStatus3": "Closed"
     },
     {
       "date": "2024-07-28",
       "waterLevel": 75,
       "gateStatus1": "Open",
-      "gateStatus2": "Open",
+      "gateStatus2": "Closed",
       "gateStatus3": "Open"
     },
     {

@@ -42,10 +42,10 @@ app.get('/api/dams/:name', (req, res) => {
 // Configure nodemailer
 const transporter = nodemailer.createTransport({
   service: 'gmail',
-  auth: {
-    user: 'komaljadav2593@gmail.com',
-    pass: 'qrni kiat kebv ccsx'
-  }
+  // auth: {
+  //   user: 'komaljadav2593@gmail.com',
+  //   pass: 'qrni kiat kebv ccsx'
+  // }
 });
 
 // Function to send email reports
@@ -67,8 +67,8 @@ const sendEmailReport = () => {
     `).join('');
 
     const mailOptions = {
-      from: 'komaljadav2593@gmail.com',
-      to: 'pavansai200503@gmail.com',
+      from: '',
+      to: '',
       subject: 'Daily Dam Report',
       html: `<h2>Daily Dam Report</h2>${damReports}`
     };
@@ -86,9 +86,9 @@ const sendEmailReport = () => {
 // Send email report immediately
 // sendEmailReport();
 
-// // Send email report every 5 minutes
-// setInterval(sendEmailReport, 1 * 60 * 1000); // Every 01 minutes
+// Send email report every 5 minutes
+//  setInterval(sendEmailReport, 10* 60 * 1000); // Every 10 minutes
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on http://localhost:${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
